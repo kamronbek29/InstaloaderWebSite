@@ -1,0 +1,24 @@
+{% extends 'instagram/html/instagram_base.html'%}
+
+{% block title %}
+     Insta Downloader
+{% endblock %}
+
+
+{% block content %}
+
+    {% if download_url is not None %}
+        {% for url in download_url %}
+        <div class="col">
+                <a class="btn btn-primary btn-lg btn-block" download href={{ url }} role="button">Download {{ forloop.counter1 }}</a>
+        </div>
+        {% endfor %}
+    {% else %}
+        {% if download_url is None %}
+            <p></p>
+        {% else %}
+            <p>Sorry, unable to download post from this link</p>
+        {% endif%}
+    {% endif%}
+
+{% endblock %}

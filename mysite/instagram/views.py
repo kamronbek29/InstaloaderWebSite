@@ -11,7 +11,13 @@ def instaloader(request):
         download_url = get_download_url(link)
         print(download_url)
 
-    return render(request, 'instagram/instagram_page.html', context={'download_url': download_url})
+    return render(
+        request,
+        'instagram/html/instagram_page.html',
+        context={
+            'download_url': download_url
+        }
+    )
 
 
 def get_download_url(link):

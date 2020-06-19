@@ -7,40 +7,38 @@
             Insta Downloader
         {% endblock %}
     </title>
+    <link rel="stylesheet" type="text/css" href="templates/base.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 </head>
-<style>
-    body {
-    min-height: 100vh;
-    background: url('https://source.unsplash.com/twukN12EN7c/1920x1080') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-    height: 100%;
-    }
-
-</style>
 
 <body>
     <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="#">
             <img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-            Downloader
+            All Saver
         </a>
     </nav>
 
-    <div class="container justify-content-center">
-        <div class="row">
-            <div class="col-6 offset-md-2">
+    <header>
+        <div class="container url-form">
+            <div>
+                <form action="/instagram/">
+                    <h1>Instagram Downloader</h1>
+                    <br>
+                    <input type="url" name="link" title="Paste URL" class="form-control" placeholder="Paste your URL" value="">
+                    <br>
+                    <input type="submit" value="Download">
+                </form>
+            </div>
+            <div class="row">
                 {% block content %}
                     There is no any content for you
                 {% endblock %}
             </div>
         </div>
-    </div>
+    </header>
 
 </body>
 </html>
